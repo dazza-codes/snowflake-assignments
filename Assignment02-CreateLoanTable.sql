@@ -15,14 +15,14 @@ CREATE TABLE LOAN_PAYMENT (
   "education" STRING,
   "Gender" STRING);
 
-//Check that table is empy
+//Check that table is empty
 SELECT * FROM LOAN_PAYMENT;
   
 COPY INTO LOAN_PAYMENT
     FROM s3://bucketsnowflakes3/Loan_payments_data.csv
     file_format = (type = csv 
                    field_delimiter = ',' 
-                   skip_header=1);
+                   skip_header = 1);
 
 //Validate
 SELECT * FROM LOAN_PAYMENT;

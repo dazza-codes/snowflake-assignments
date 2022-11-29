@@ -15,10 +15,8 @@ copy into Customers
     from s3://snowflake-assignments-mc/gettingstarted/customers.csv
     file_format = (type = csv 
                    field_delimiter = ',' 
-                   skip_header=1);
+                   skip_header = 1);
 
 select * from Customers;
 
 drop database EXERCISE_DB;
-
-
